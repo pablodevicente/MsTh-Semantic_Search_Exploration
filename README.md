@@ -1,8 +1,8 @@
 ## An Intelligent Semantic Search System for Digital Product  Part Design Catalogues in Manufacturing
 
-A *modular framework* for **semantic similarity search** over digital product catalogues in industrial settings. This repository focuses on end‑to‑end retrieval and ranking—starting from **precomputed embeddings** (see the companion repo _“Internship 2: Categorization of Textual Industrial (Technical) Reports”_ for raw PDF parsing and embedding generation) through **configurable retrieval pipelines** (VSM, BM25, RRF, hybrid reranking, single‑ vs. multi‑vector representations, normalization, query expansion, etc.). Its **flexible design** makes it easy to compare and fine‑tune diverse strategies under a unified experimental setup.  
+Developed a modular framework for **semantic similarity** search over industrial product catalogues, enabling end-to-end **document retrieval** and **ranking**. The system supports a wide range of configurable strategies, including VSM, BM25, RRF, hybrid reranking, single- and multi-vector representations, normalization, and query expansion. Its flexible architecture allows for easy experimentation and fine-tuning of retrieval pipelines under a unified setup.
 
----
+This work builds on precomputed embeddings generated from raw PDF data—see the companion repository “Internship 2: Categorization of Textual Industrial (Technical) Reports” for details on parsing and embedding generation.
 
 ### 📖 Context & Motivation
 
