@@ -1,5 +1,6 @@
 # Python version: 3.12.4
 # Interpreter path: /home/pablo/anaconda3/bin/python
+# Some of them will not be necessary. I include everything so that cross-library compatibility can be traced
 
 # Installed packages:
 absl-py @ file:///croot/absl-py_1714140470852/work
