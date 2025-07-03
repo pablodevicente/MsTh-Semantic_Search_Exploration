@@ -6,6 +6,7 @@ import pandas as pd
 from pathlib import Path
 import logging
 import nltk
+import yaml
 
 
 nltk.download('punkt_tab')
@@ -20,20 +21,13 @@ def setup_logging():
 
 def main():
     setup_logging()
+    with open("config.yml", "r") as f:
+        config = yaml.safe_load(f)
 
-    paths = {
-        'word2vec': Path("../02-data/03-VSM/01-Word2Vec/word2vec-google-news-300.bin"),
-        'idf_cache': Path("../02-data/03-VSM/idf_cache_path.pkl"),
-        'word2vec_vsm_multivector': Path("../02-data/03-VSM/01-Word2Vec/word2vec-4-50-4-150-1.pkl"),
-        'word2vec_vsm_singlevector': Path("../02-data/03-VSM/01-Word2Vec/word2vec-4-50-4-150-0.pkl"),
-        'file': Path("../02-data/00-testing/batteries-non-rechargable-primary/1cr2/1cr2.txt"),
-        'output_path': Path("../02-data/00-testing/batteries-non-rechargable-primary/1cr2/sentence_expansions.txt"),
-        'pdf_folder': Path("../02-data/00-testing/"),
-        'retriever': Path("../02-data/05-Retrieval/corpus_bm25")
-    }
-
-    query = "this battery contains positive temperature coefficient element"
-    top_k = 20
+    # Convert string paths to Path objects
+    paths = {k: Path(v) for k, v in config["paths"].items()}
+    query = config["query"]
+    top_k = config["top_k"]
 
     results_df = pd.DataFrame()
 

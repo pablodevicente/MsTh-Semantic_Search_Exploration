@@ -1,0 +1,12 @@
+paths:
+  word2vec: ../02-data/03-VSM/01-Word2Vec/word2vec-google-news-300.bin
+  idf_cache: ../02-data/03-VSM/idf_cache_path.pkl
+  word2vec_vsm_multivector: ../02-data/03-VSM/01-Word2Vec/word2vec-4-50-4-150-1.pkl
+  word2vec_vsm_singlevector: ../02-data/03-VSM/01-Word2Vec/word2vec-4-50-4-150-0.pkl
+  file: ../02-data/00-testing/batteries-non-rechargable-primary/1cr2/1cr2.txt
+  output_path: ../02-data/00-testing/batteries-non-rechargable-primary/1cr2/sentence_expansions.txt
+  pdf_folder: ../02-data/00-testing/
+  retriever: ../02-data/05-Retrieval/corpus_bm25
+
+query: "this battery contains positive temperature coefficient element"
+top_k: 20
