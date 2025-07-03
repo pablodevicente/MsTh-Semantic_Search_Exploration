@@ -1,0 +1,63 @@
+notes for thesis
+
+
+1. Table to text workflow
+
+the idea is that my approach is unique. why? because i preserve all the information possible with my framework
+with tables in specific, i take a dual model approach, to convert all possible table
+
+
+https://www.html-to-pdf.net/pdf-to-text.aspx -- other frameworks dont even bother with tables
+the only ones that bother with tables are specific models used for question answering
+
+https://github.com/infiniflow/ragflow -- suports multimodal embedding for images, but no tables
+
+really cool reading capabilities, but no table explanation https://arxiv.org/pdf/2408.09869
+
+gets images, but not tables http://github.com/Unstructured-IO/unstructured
+
+really good reader, but does not process tables https://github.com/run-llama/llama_cloud_services/blob/main/parse.md
+
+
+
+differences inbetween existing methods and my own
+
+1. most notably. pdf to text is usually done from pre-existing structured tables
+	in my case, as i am getting the tables from a pdf formatter, the structures are wild
+	this complicates shit
+	
+2. to handle the variety of data tables, i employ multimodel processing, where depending on the characteristics of the table it can be
+	processed one way or the other
+	
+	
+original research question: how can documents (catalogs = {text, images, tables}) be transformed into a vector space
+
+what is the novelty here?
+they are doing it in this specific way, but my method is better on _______this_______ aspect
+
+
+--- the novelty is that our framework handles 1. unstructured table data, which is not the norm on the rest of papers
+------ most people when doing structured table processing employ one model. we do multimodal table processing. Why? to be able to process all kinds of tables
+		one model is for structrued tables (>5 rows) and the other for "questionaires", table-like, but not tables fully.
+
+
+
+However, how to effectively bridge the gap
+between the structured table and the text input by fully leveraging table information to
+fuel the pretrained model is still not well explored.
+
+.------------https://arxiv.org/pdf/2301.02071------------- they only talk about structured tables see?
+
+
+ Furthermore, the text-to-text pretrained
+model decodes and generates a sequence in a onepass forward process, which means it cannot perceive the future words in advance on the target side
+
+
+
+is it efficient? is it worth the trouble?
+
+----pf, how the fuck do i meassure this
+
+
+what does the image/table processing add to the mix?
+what benefits do multimodel table processing have?
